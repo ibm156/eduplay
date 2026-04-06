@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg:      #0A0C10;
+    --surface: #111318;
+    --card:    #161A22;
+    --border:  #1E2330;
+    --border2: #262D3D;
+    --accent:  #3B82F6;
+    --accent2: #10B981;
+    --warn:    #F59E0B;
+    --danger:  #EF4444;
+    --text:    #E8ECF4;
+    --muted:   #6B7694;
+    --subtle:  #2A3149;
+  }
+  html {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  body { background: var(--bg); overscroll-behavior: none; }
+  * { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }
+}
+
+@layer utilities {
+  .font-syne { font-family: 'Syne', sans-serif; }
+  .font-mono { font-family: 'DM Mono', monospace; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up { animation: fadeUp 0.25s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.2s ease-out forwards; }
