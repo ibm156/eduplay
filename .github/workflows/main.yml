@@ -1,13 +1,11 @@
-- name: Build & Push Backend
-        uses: docker/build-push-action@v5
-        with:
-          context: ./eduplay-backend
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/eduplay-backend:latest
+name: Legacy Main Workflow (Disabled)
 
-      - name: Build & Push Primary Frontend
-        uses: docker/build-push-action@v5
-        with:
-          context: ./eduplay-primary
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/eduplay-primary:latest
+on:
+  workflow_dispatch:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notice
+        run: echo "This workflow is intentionally disabled. Use deploy.yml, backend.yml, primary.yml, secondary.yml, and teacher.yml."
