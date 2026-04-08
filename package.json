@@ -1,1 +1,9 @@
-"homepage": "https://ibm156.github.io/eduplay",
+{
+  "name": "eduplay-root",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://ibm156.github.io/eduplay",
+  "scripts": {
+    "build": "npm run build --prefix eduplay-primary"
+  }
+}
